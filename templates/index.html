@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<link rel="stylesheet" type="text/css" href=" {{url_for('static', filename='base.css')}}">
+
+<body>
+    <div class="center">
+        <h1>Sign In</h1>
+        <form method = "post">
+            <div class="txt_field"> 
+                <input type="text" id="username" name="username" required> 
+                <span></span>
+                <label>Username</label>
+            </div>
+            <input type="submit" value="Sign In">
+        </form>
+    <div>
+    <div class= "error">
+        <center> {{error_message}} </center>
+    </div>
+</body>
+
+</html>

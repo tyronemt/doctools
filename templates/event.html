@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <div>
+        <center> 
+            <form action="{{ url_for('create_event') }}">
+                <input type="submit" value="Create Event" />
+            </form>
+        </center>
+    </div>
+    <div> 
+        <center><table class="centered thick-border">
+            <tr>
+                    <th>ID &nbsp;</th>
+                    <th>userID &nbsp;</th>
+                    <th>Name &nbsp;</th>
+                    <th>Description &nbsp;</th>
+                    <th>Date Added&nbsp;</th>
+            </tr>
+            {% for k in list%}
+                    <tr>
+                            <td>{{ k[0] }}</td>
+                            &nbsp;
+                            <td>{{ k[1] }}</td>
+                            &nbsp;
+                            <td>{{ k[2] }}</td>
+                            &nbsp;
+                            <td>{{ k[3] }}</td>
+                            &nbsp;
+                            <td>{{ k[4]}}</td>
+                            &nbsp;
+                    </tr>
+            {% endfor %}
+        </table></center>
+    </div>
+</html>

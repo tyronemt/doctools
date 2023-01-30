@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<link rel="stylesheet" type="text/css" href=" {{url_for('static', filename='base.css')}}">
+
+<body>
+    <div class="center">
+        <h1>Main Menu</h1>
+        <div>
+            <form action="{{ url_for('event') }}">
+                <input type="submit" value="Events" />
+            </form>
+        </div>
+        <div>
+            <form action="{{ url_for('task') }}">
+                <input type="submit" value="Task" />
+            </form>
+        </div>
+    <div>
+</body>
+</html>
