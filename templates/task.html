@@ -1,41 +1,32 @@
-<!doctype html>
-<html>
-    <div>
-        <center> 
-            <form action="{{ url_for('create_task') }}">
-                <input type="submit" value="Create task" />
-            </form>
-        </center>
-    </div>
-    <div>
-        <center><table class="centered thick-border">
-            <tr>
-                    <th>ID &nbsp;</th>
-                    <th>userID &nbsp;</th>
-                    <th>Name &nbsp;</th>
-                    <th>Description &nbsp;</th>
-                    <th>Complete &nbsp;</th>
-                    <th>Due Date&nbsp;</th>
-                    <th>Date Added&nbsp;</th>
-            </tr>
-            {% for k in list%}
-                    <tr>
-                            <td>{{ k[0] }}</td>
-                            &nbsp;
-                            <td>{{ k[1] }}</td>
-                            &nbsp;
-                            <td>{{ k[2] }}</td>
-                            &nbsp;
-                            <td>{{ k[3] }}</td>
-                            &nbsp;
-                            <td>{{ k[4]}}</td>
-                            &nbsp;
-                            <td>{{ k[5]}}</td>
-                            &nbsp;
-                            <td>{{ k[6]}}</td>
-                            &nbsp;
-                    </tr>
-            {% endfor %}
-        </table></center>
-    </div>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+<a href="home" class="btn btn-info" role="button">HOME</a>
+<a href="create_task" class="btn btn-info" role="button">Create Tasks</a>
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>USERID</th>
+        <th>NAME</th>
+        <th>DESCRIPTION</th>
+        <th>Complete</th>
+        <th>Due Date</th>
+        <th>Date Added</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for task in list %}
+        <tr>
+          <td>{{ task[0] }}</td>
+          <td>{{ task[1] }}</td>
+          <td>{{ task[2] }}</td>
+          <td>{{ task[3] }}</td>
+          <td>{{ task[4] }}</td>
+          <td>{{ task[5] }}</td>
+          <td>{{ task[6] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

@@ -42,10 +42,11 @@ def create_user(username):
     cursor.close()
 
 def create_event(userID, name, description):
+    print(userID, name, description)
     cursor = mydb.cursor()
     cursor.execute("USE DB;")
 
-    QUERY = "INSERT INTO EVENTS (userID , name, description) VALUES (%d, '%s', '%s');" % userID, name, description
+    QUERY = "INSERT INTO EVENTS (userID , name, description) VALUES (%d, '%s', '%s');" %(userID, name, description)
     print(QUERY)
 
     cursor.execute(QUERY)
@@ -58,7 +59,7 @@ def create_task(userID, name, description, due_date):
     cursor = mydb.cursor()
     cursor.execute("USE DB;")
 
-    QUERY = "INSERT INTO tasks (userID, name, description, complete, due_date) VALUES ( %d, '%s',  '%s', 0, '%s');" % userID, name, description, due_date
+    QUERY = "INSERT INTO tasks (userID, name, description, complete, due_date) VALUES ( %d, '%s',  '%s', 0, '%s');" % (userID, name, description, due_date)
     print(QUERY)
 
     cursor.execute(QUERY)
