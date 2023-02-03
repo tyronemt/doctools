@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for, session
-
 import db
 
 app = Flask(__name__)
@@ -42,6 +41,12 @@ def create_event():
 
 @app.route("/create_task",  methods = ["POST", "GET"])
 def create_task():
+    if request.method == 'POST':
+        name = request.form.get('name', None)
+        description = request.form.get('description', "")
+        due_date = request.form.get('due_date')
+        db.create_task(session["current_user"], name, description, due_date)
+        return redirect(url_for('task'))
     return render_template('create_task.html')
 
 @app.route("/info",  methods = ["POST", "GET"])

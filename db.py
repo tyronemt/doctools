@@ -53,13 +53,18 @@ def create_event(userID, name, description):
     mydb.commit()
     cursor.close()
 
-
-
 def create_task(userID, name, description, due_date):
     cursor = mydb.cursor()
     cursor.execute("USE DB;")
 
-    QUERY = "INSERT INTO tasks (userID, name, description, complete, due_date) VALUES ( %d, '%s',  '%s', 0, '%s');" % (userID, name, description, due_date)
+    if due_date == "NA":
+        due_date = "null"
+    else:
+        m = due_date[0:2]
+        d = due_date[2:4]
+        y = due_date[4:8]
+        due_date = "'" + y + '-' + m + '-' + d + "'" 
+    QUERY = "INSERT INTO tasks (userID, name, description, complete, due_date) VALUES ( %d, '%s',  '%s', 0, %s);" % (userID, name, description, due_date)
     print(QUERY)
 
     cursor.execute(QUERY)
@@ -106,3 +111,4 @@ def get_tasks(user_id):
 if __name__ == "__main__":
     drop_db()
     create_db()
+    create_user("tong800")
