@@ -1,6 +1,5 @@
 <div>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>{% block title %}{% endblock %}</title>
     <style> 
       /* Modify the background color */ 
         
@@ -17,6 +16,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="info">Important Info</a>
               </li>
+              
             </ul>
         </nav>
       
@@ -29,7 +29,9 @@
 {% block content %}
 <h2>Fax Number: (951) 637-9988</h2>
 <h2>NPI 1144256900</h2>
-  <table id="data" class="table table-striped">
+
+<h3>Offices</h3>
+<table id="data" class="table table-striped">
     <thead>
       <tr>
         <th>LOCATION</th>
@@ -65,6 +67,7 @@
         </tr>
     </tbody>
   </table>
+  <h3>Phone Numbers</h3>
   <table id="data" class="table table-striped">
     <thead>
       <tr>
@@ -98,6 +101,41 @@
           <td>WELLCARE Transportation</td>
           <td>Phone Number: (866) 653-0975</td>
           <td>N/A</td>
+        </tr>
+    </tbody>
+  </table>
+  <h3>Insurances</h3>
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Insurance We Take</th>
+        <th>Insurance We Do Not Take</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>Medicare</td>
+          <td>Medi-Cal</td>
+        </tr>
+        <tr>
+          <td>Freedom</td>
+          <td>Molina</td>
+        </tr>
+        <tr>
+          <td>IEHP</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Anthem 
+            *as long as we are their primary care, has
+             to have Dr. Robert Nguyen on their card, check 
+            Lorena to make sure*</td>
+            <td></td>
+        </tr>
+        <tr>
+          <td>HealthNet
+            *depends, send a picture to Lorena to verify</td>
+            <td></td>
         </tr>
     </tbody>
   </table>
