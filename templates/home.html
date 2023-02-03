@@ -6,6 +6,11 @@
     <div class="center">
         <h1>Main Menu</h1>
         <div>
+            <form action="{{ url_for('info') }}">
+                <input type="submit" value="Information" />
+            </form>
+        </div>
+        <div>
             <form action="{{ url_for('event') }}">
                 <input type="submit" value="Events" />
             </form>

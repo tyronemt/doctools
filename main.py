@@ -44,5 +44,9 @@ def create_event():
 def create_task():
     return render_template('create_task.html')
 
+@app.route("/info",  methods = ["POST", "GET"])
+def info():
+    return render_template('info.html')
+
 if __name__ == "__main__":
     app.run(debug=True)

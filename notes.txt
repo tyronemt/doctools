@@ -1,0 +1,5 @@
+Edit task and EVENTS
+delete task and EVENTS
+Add doctor information
+add when doctor is in and when staff is in
+sort by location
