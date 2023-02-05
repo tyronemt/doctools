@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import db
+import csv
+
 
 app = Flask(__name__)
 app.secret_key = "doc"
@@ -52,6 +54,15 @@ def create_task():
 @app.route("/info",  methods = ["POST", "GET"])
 def info():
     return render_template('info.html')
+
+@app.route("/san_bernardino",  methods = ["POST", "GET"])
+def san_bernardino():
+    lst = []
+    with open("static\san_bernardino.csv", "r") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            lst.append(row)
+    return render_template('san_bernardino.html', list = lst)
 
 if __name__ == "__main__":
     app.run(debug=True)

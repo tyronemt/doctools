@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+  <h3>San Bernardino Clinic</h3>
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Specialty</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Fax Number</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for item in list %}
+          <tr>
+            <td>{{item[0]}}</td>
+            <td>{{item[1]}}</td>
+            <td>{{item[2]}}</td>
+            <td>{{item[3]}}</td>
+            <td>{{item[4]}}</td>
+          </tr>
+        {% endfor %}  
+    </tbody>
+  </table>
+{% endblock %}
