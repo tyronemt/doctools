@@ -62,7 +62,26 @@ def san_bernardino():
         reader = csv.reader(file)
         for row in reader:
             lst.append(row)
-    return render_template('san_bernardino.html', list = lst)
+    return render_template('office.html', name = "San Bernardino Clinic", list = lst)
+
+@app.route("/riverside",  methods = ["POST", "GET"])
+def riverside():
+    lst = []
+    with open("static\-riverside.csv", "r") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            lst.append(row)
+    return render_template('office.html', name = "Riverside Clinic", list = lst)
+
+@app.route("/pomona",  methods = ["POST", "GET"])
+def pomona():
+    lst = []
+    with open("static\pomona.csv", "r") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            lst.append(row)
+    return render_template('office.html', name = "Pomona Clinic", list = lst)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
