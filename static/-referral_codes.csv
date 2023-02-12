@@ -1,0 +1,36 @@
+Service,Type,ICD-10,CPT,Total Care PT CPT Codes
+OFFICE VISIT,New,,99203,97163
+RADIOLOGY,,,,97162
+,Mammogram,Z12.31,77067,97161
+,US pelvic transabdominal,,76856,X3920
+,Left breast diagnostic mammogram and US,R92.0,77066 and 76641,97110
+,Right breast diagnostic mammogram and US,R92.0,77066 and 76642,97140
+,Abd US due to elevated AST/ALT,R74.0,,97032
+,Chest x-ray three views (pre-op),Z01.818,,A4595
+,Brain MRI w/wo contrast to evaluate for HA with h/o brain tumor,Z85.841,,
+,Thyroid nodule aspiration for one nodule and with US,US,10005 and 76942 (US),
+,Thyroid nodule aspiration bilateral nodules,,10006,
+,Lung cancer screening for smokers,Z12.2 and F17.210,71271,
+OBGYN,Pap Smear,Z01.419; Z12.4,99203,
+DME,Front-wheel walker,R26.2,E0143,
+HOME HEALTH PT,Home health PT due to weakness,R68.89 and R53.1,99204,
+PULMONARY,Pulmonary function test,R94.2,99204; f/u 99214,
+GASTROENTEROLOGY,,,,
+,EGD due to GERD,K21.9,43210,
+,HIDA SCAN due to gallstones,K80.20,78226 and A9537,
+NUCLEAR MEDICINE,Gastric emptying study,R26.2,78264 and A9541,
+FLU SHOT,,V04.81,90471,
+TB,,V74.1,,
+BIOPSY,,,76942 (US); 77012 (CT),
+NEBULIZER TX,,,9646400,
+,Albuterol,J7613,,
+,Combination,J7644,,
+SLEEP STUDY,,,95811,
+BONE DENSITY,,M81.0; Z13.820,77080,
+COLONOSCOPY,,Z12.11,99203,
+ABDOMEN ULTRASOUND,,441.4,76700,
+EYE EXAM,,,,
+,Regular eye exam,Z01.00,,
+,Hist Glaucoma,365,,
+,Renal exam,S3000,,
+HbA1c,,,83036,

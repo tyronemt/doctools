@@ -82,6 +82,28 @@ def pomona():
             lst.append(row)
     return render_template('office.html', name = "Pomona Clinic", list = lst)
 
+@app.route("/montclair",  methods = ["POST", "GET"])
+def montclair():
+    lst = []
+    with open("static\montclair.csv", "r") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            lst.append(row)
+    return render_template('office.html', name = "Montclair Clinic", list = lst)
+
+@app.route("/referral_codes",  methods = ["POST", "GET"])
+def referral_codes():
+    lst = []
+    with open("static\-referral_codes.csv", "r") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            lst.append(row)
+    return render_template('referral_codes.html', name = "Referral Codes", list = lst)
+
+@app.route("/cpt_code",  methods = ["POST", "GET"])
+def cpt_code():
+    return render_template('cpt_code.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
