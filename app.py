@@ -58,7 +58,7 @@ def info():
 @app.route("/san_bernardino",  methods = ["POST", "GET"])
 def san_bernardino():
     lst = []
-    with open("static\san_bernardino.csv", "r") as file:
+    with open("static/san_bernardino.csv", "r") as file:
         reader = csv.reader(file)
         for row in reader:
             lst.append(row)
@@ -67,7 +67,7 @@ def san_bernardino():
 @app.route("/riverside",  methods = ["POST", "GET"])
 def riverside():
     lst = []
-    with open("static\-riverside.csv", "r") as file:
+    with open("static/-riverside.csv", "r") as file:
         reader = csv.reader(file)
         for row in reader:
             lst.append(row)
@@ -76,7 +76,7 @@ def riverside():
 @app.route("/pomona",  methods = ["POST", "GET"])
 def pomona():
     lst = []
-    with open("static\pomona.csv", "r") as file:
+    with open("static/pomona.csv", "r") as file:
         reader = csv.reader(file)
         for row in reader:
             lst.append(row)
@@ -85,7 +85,7 @@ def pomona():
 @app.route("/montclair",  methods = ["POST", "GET"])
 def montclair():
     lst = []
-    with open("static\montclair.csv", "r") as file:
+    with open("static/montclair.csv", "r") as file:
         reader = csv.reader(file)
         for row in reader:
             lst.append(row)
@@ -94,7 +94,7 @@ def montclair():
 @app.route("/referral_codes",  methods = ["POST", "GET"])
 def referral_codes():
     lst = []
-    with open("static\-referral_codes.csv", "r") as file:
+    with open("static/-referral_codes.csv", "r") as file:
         reader = csv.reader(file)
         for row in reader:
             lst.append(row)
