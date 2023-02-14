@@ -1,0 +1,2 @@
+ssh -i "SSH.pem" ubuntu@ec2-54-177-92-73.us-west-1.compute.amazonaws.com
+source venv/bin/activate
