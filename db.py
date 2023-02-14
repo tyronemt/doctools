@@ -66,7 +66,7 @@ def create_task(userID, name, description, due_date):
         d = due_date[2:4]
         y = due_date[4:8]
         due_date = "'" + y + '-' + m + '-' + d + "'" 
-    QUERY = "INSERT INTO tasks (userID, name, description, complete, due_date) VALUES ( %d, '%s',  '%s', 0, %s);" % (userID, name, description, due_date)
+    QUERY = "INSERT INTO TASKS (userID, name, description, complete, due_date) VALUES ( %d, '%s',  '%s', 0, %s);" % (userID, name, description, due_date)
     print(QUERY)
 
     cursor.execute(QUERY)
