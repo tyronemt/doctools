@@ -9,9 +9,8 @@ mydb = mysql.connector.connect(
 )
 
 def drop_db():
-#   cursor = mydb.cursor()
-#   cursor.execute("DROP DATABASE `db`;")
-    pass
+  cursor = mydb.cursor()
+  cursor.execute("DROP DATABASE `db`;")
 
 
 def create_db():
