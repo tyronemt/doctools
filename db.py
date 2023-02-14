@@ -25,7 +25,7 @@ def create_db():
 
     cursor.execute("CREATE TABLE IF NOT EXISTS EVENTS (id INT AUTO_INCREMENT PRIMARY KEY, userID INT NOT NULL, name VARCHAR(255) NOT NULL, description TEXT, date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP);")
 
-    cursor.execute("CREATE TABLE tasks (id INT AUTO_INCREMENT PRIMARY KEY, userID INT NOT NULL, name VARCHAR(255) NOT NULL, description TEXT, complete BOOLEAN NOT NULL DEFAULT 0, due_date DATE, date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP);")
+    cursor.execute("CREATE TABLE IF NOT EXISTS TASKS (id INT AUTO_INCREMENT PRIMARY KEY, userID INT NOT NULL, name VARCHAR(255) NOT NULL, description TEXT, complete BOOLEAN NOT NULL DEFAULT 0, due_date DATE, date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP);")
 
     print(cursor.rowcount, "record inserted.")
 
