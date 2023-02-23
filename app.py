@@ -104,6 +104,6 @@ def referral_codes():
 def cpt_code():
     return render_template('cpt_code.html')
 
-
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080)
+    app.run()
+    # app.run(host='0.0.0.0', port=8080)
